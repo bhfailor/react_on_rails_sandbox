@@ -32,3 +32,13 @@
     props: @hello_world_props,
     prerender: true,
 ) %>
+
+<% link_to_tutorial =
+   'https://github.com/shakacode/react_on_rails/blob/master/docs/tutorial.md'
+%>
+<hr />
+<div>
+  <a data-role="cite-source" href='<%="#{link_to_tutorial}" %>' >
+    Learn more about the react-on-rails gem!
+  </a>
+<div>

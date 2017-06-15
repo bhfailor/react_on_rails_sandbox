@@ -4,7 +4,7 @@ RSpec.feature 'Site Visitor Can Choose An Activity', :type => :feature do
   scenario 'Links are visible' do #, :js do
     expect(root_path).not_to be_nil # given
 
-    visit '/' # when
+    visit root_path # when
 
     expect(page).to have_css(  # then
                              '[data-role="link-to-receive-greeting"]',

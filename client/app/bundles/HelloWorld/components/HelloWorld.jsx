@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Container from "./Container";
+// import Container from "./Container";
 
 export default class HelloWorld extends React.Component {
   static propTypes = {
@@ -42,7 +42,6 @@ export default class HelloWorld extends React.Component {
             onChange={this.updateName}
           />
         </form>
-	<Container />
       </div>
     );
   }
