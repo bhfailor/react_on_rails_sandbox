@@ -35,6 +35,7 @@ export default class HelloWorld extends React.Component {
             Say hello to:
           </label>
           <input
+            data-role="name-input-for-greeting"
             id="name"
             type="text"
             value={this.state.name}

@@ -34,11 +34,21 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # inspired by  ~/etszone-clone/cpc-ruby/Gemfile
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger
+  # console.  Actually added pry for this functionality as well...
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker' # Generate random names, addresses, emails, etc.
+  # gem 'selenium-webdriver' # prefer poltergeist for headless testing
+  # phantomjs dependency: ~/etsz2/ct-ruby/lib/provisioners/install_phantomjs.sh
+  gem 'poltergeist'
+  gem 'pry-rails' # can also use in views: <% binding.pry %>
+  gem 'rspec-rails'
 end
 
 group :development do
