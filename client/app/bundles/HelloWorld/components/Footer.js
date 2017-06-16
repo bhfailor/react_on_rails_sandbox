@@ -6,12 +6,16 @@ class Footer extends React.Component {
   }
   remainingCount() {
     if (this.props.gameState !== "recall") {
-      //debugger;
       if (this.props.gameState === "won" || this.props.gameState === "lost") {
         return (
-          <button className="play-again-button" onClick={this.handleClick}>
-	    Play Again
-	  </button>
+	  <div className="row">
+            <button className="play-again-button btn btn-default" onClick={this.handleClick}>
+	      Play Again
+	    </button>
+            <a className="btn btn-default" href="/" role="button">
+	      Choose an activity
+	    </a>
+	  </div>
         );
       }
       return null;
